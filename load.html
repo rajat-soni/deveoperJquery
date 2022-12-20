@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://www.tutorialspoint.com/jquery/jquery-3.6.0.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            $("#driver").click(function(event){
+				
+               $.getJSON('main.json', function(jd) {
+                  $('#stage').html('<p> Name: ' + jd.name + '</p>');
+                
+               });
+					
+            });
+         });
+      </script>
+   </head>
+	
+   <body>
+      <p>Click on the button to load result.json file −</p>
+		
+      <div id = "stage" style = "background-color:#eee;">
+         STAGE
+      </div>
+		
+      <input type = "button" id = "driver" value = "Load Data" />
+   </body>
+</html>
+
+

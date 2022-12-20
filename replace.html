@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>The jQuery Example</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function() {
+      $("button").click(function(){
+         $("#home").attr("title", "New Anchor Title");
+         $("#home").attr("href", "replace.html");
+         
+         /* Let's get and display changed title */
+         
+         console.log( "Changed Title = " + $("#home").attr("title"));
+         console.log( "Changed href = " + $("#home").attr("href"));
+         
+         
+
+      });
+   });
+</script>
+</head>
+<body>
+   <p>Click the below button to see the result:</p>
+   
+   <p><a id="home" href="index.htm" title="Tutorials Point">Home</a></p>
+   <button>Set Attribute</button>
+   <p>You can hover the Home link to verify the title before and after the change.</p>
+</body>
+</html>

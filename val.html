@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+<head>
+<title>The jQuery Example</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function() {
+      $("#b1").click(function(){
+         alert($("#name").val());
+         alert($("#class").val());
+        $('#name').attr('value','Rajat soni')
+        $('#class').attr('value','MCA')
+        $('#class').attr('value');
+
+      });
+     
+   });
+</script>
+</head>
+<body>
+   <p>Name: <input type="text" id="name" value="Zara Ali"/></p>
+   <p>Class: <input type="text" id="class" value="Class 12th"/></p>
+   
+   <button id="b1">Get Name & Class</button>
+  
+</html>
