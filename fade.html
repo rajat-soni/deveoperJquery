@@ -1,0 +1,24 @@
+!doctype html>
+<html>
+<head>
+<title>The jQuery Example</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function() {
+      $("button").click(function(){
+         $("p").css("color", "#fb7c7c");
+         $("p").fadeOut(1000);
+         $("p").fadeIn(1000);
+      });
+   });
+</script>
+<style>
+   button{width:100px;cursor:pointer;}
+</style>
+</head>
+<body>
+   <p>Click the below button to see the result:</p>
+
+   <button>Click Me</button>
+</body>
+</html>
