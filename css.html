@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>The jQuery Example</title>
+<script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+<script>
+   $(document).ready(function() {
+      $("button").click(function(){
+         $("div").css({"background-color":"#fb7c7c", "font-size": "25px"});
+      });
+   });
+</script>
+<style>
+   button{margin:10px;width:150px;cursor:pointer}
+   div{ margin:10px;padding:12px; width:125px;}
+</style>
+</head>
+<body>
+   <p>Click the below button to see the result:</p>
+
+   <div style="background-color:#9c9cff;">Blue</div>
+   <div style="background-color:#93ff93;">Green</div>
+
+   <button>Set CSS Property</button>
+</body>
+</html>
