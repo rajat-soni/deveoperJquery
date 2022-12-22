@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+    <head>
+    <title>The jQuery Example</title>
+    <style>
+        #wraper{
+            display: none;
+            
+        }
+        #main {
+            width:  40%;
+            border: 1px black solid;
+            background-color: lightgoldenrodyellow;
+            padding : 0px 10px 0px 10px;
+        }
+    </style>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <script>
+
+        var isFilled=false;
+       $(document).ready(function() {
+          $("#b1").click(function(){
+                var value1 = $("#name").val();
+                var value2 = $("#class").val();
+                var value3  = $("#name1").val($("#name").val()); 
+                var value4  = $("#class1").val($("#class").val()); 
+              $('#main').draggable();
+                      
+                if($("#name").val() == 'divya' &&  $("#class").val() == 'B-tech'){
+                    $('#wraper').show(1000)
+                  
+                    if(isFilled===false){ ndShowMessage() };
+                        ndshow();  
+                    }else{   
+                    ndHide();
+                }
+            });
+           
+         
+        });  
+    
+        function ndHide(){ // for hide pop up
+            $('#para').fadeIn(500).html();
+                
+    
+                setTimeout(()=>{   
+            $('#para').fadeOut(2000).html("<b style = 'color: red;'> Field should not be empty or not matched.!</b>");
+            })
+          
+        }
+        function ndShowMessage(){ // for show pop up
+           
+            $('#para').fadeIn(1000);
+                setTimeout(()=>{   
+             $('#para').fadeOut(3000).html("<b style = 'color: green;'>Thanks for submitting the detail..!</b>");
+        }
+        
+           )}
+                
+        function elmRemove() {  // for removing the element ..
+          $('#wraper').remove();
+         
+        }
+        
+        function ndshow(){ // show data //
+    
+                 $('#name1').val($("#name").val())
+                 $('#class1').val($("#class").val())
+                 isFilled=true;
+      
+        }
+       
+        
+        
+     
+    </script>
+    </head>
+    <body>
+        <div id = "main" class = "ui-widget-content">
+       <p>Name: <input type="text" id="name" value=""/></p>
+       <p>Class: <input type="text" id="class" value=""/></p>
+        </div>
+    
+       <p id = "wraper">Name1: <input type="text" id="name1" value=""/>
+       Class1: <input type="text" id="class1" value=""/> &nbsp;<button onclick = "elmRemove()">Remove</button></p>
+      
+       <p id = "para"></p>
+       
+       <button id="b1">Get Name & Class</button>
+       </html>
