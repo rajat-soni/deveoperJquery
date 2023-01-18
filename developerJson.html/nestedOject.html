@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+
+</head>  
+<body>  
+    <div id ="space"></div>
+
+    <script>  
+        var i,obj,x = "";
+
+         obj ={ "name":"Rajat",
+        "last":"Soni",
+         "address": {
+            "address1":"Rahimabad",
+            "address2":"Malihabad",
+        },
+        
+        };
+        for(i in obj.address){
+        x+= obj.address[i]+ "<br>";
+        document.getElementById('space').innerHTML = x;
+        }
+        </script>    
+
+   
+</body>
+
+</html>

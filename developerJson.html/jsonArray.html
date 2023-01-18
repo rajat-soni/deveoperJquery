@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+
+</head>  
+<body>  
+    <div id ="space"></div>
+
+    <script>  
+        var i,obj,x = "";
+
+         obj ={ "name":"Rajat",
+        "last":"Soni",
+         "course": ["Php","Anroid","nodeJs","expressJs"]
+        
+        
+        };
+        for(i in obj.course){
+        x+= obj.course[i]+ "<br>";
+        document.getElementById('space').innerHTML = x;
+        }
+        </script>    
+
+   
+</body>
+
+</html>
